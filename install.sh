@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Download OVS
-wget http://openvswitch.org/releases/openvswitch-2.6.0.tar.gz
-tar -xzvf openvswitch-2.6.0.tar.gz
-mv openvswitch-2.6.0 openvswitch
+wget http://openvswitch.org/releases/openvswitch-2.3.1.tar.gz
+tar -xzvf openvswitch-2.3.1.tar.gz
+mv openvswitch-2.3.1 openvswitch
 cd openvswitch
 
 # Install OVS
