@@ -1,14 +1,5 @@
 #!/bin/sh
 
 # Start OVS
-ovsdb-server /usr/local/etc/openvswitch/conf.db \
---remote=punix:/usr/local/var/run/openvswitch/db.sock \
---remote=db:Open_vSwitch,Open_vSwitch,manager_options \
---private-key=db:Open_vSwitch,SSL,private_key \
---certificate=db:Open_vSwitch,SSL,certificate \
---bootstrap-ca-cert=db:Open_vSwitch,SSL,ca_cert --pidfile --detach --log-file
-
-ovs-vsctl --no-wait init
-ovs-vswitchd --pidfile --detach
-ovs-vsctl show
-ovs-vsctl --version
+sudo /usr/local/share/openvswitch/scripts/ovs-ctl --system-id=random start
+sudo ovs-vsctl --version
